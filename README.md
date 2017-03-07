@@ -19,3 +19,13 @@ npm start
 然后在浏览器里面输入localhost:4000就可以运行了。
 
 当然你也可以直接打开build下面的index.html，因为这已经是编译过的了，你也可以在src/assets/data.js里面修改数据，然后重新编译生成自己的动态简历。
+
+## 说明 ##
+
+需要修改显示速度就到client/src/components/reactResume.js里面的this.time那里，time的数值是指多少ms显示一个字。
+
+使用async和await时遇到babel编译的坑，最后用babel-runtime和babel-plugin-transform-runtime两个模块搞定了。
+
+可以借助redux-devTools的chrome插件来查看redux里面的所有状态。
+
+关于webpack和react环境的搭建，请看我这篇博客：https://segmentfault.com/a/1190000008574361
