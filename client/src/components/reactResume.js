@@ -58,7 +58,7 @@ class ReactResume extends React.Component {
 	}
 	async show() {
 		await this.showStyleContent(0)
-		await this.showResumeContent().then(() => {}, () => { console.log("get resume err")})
+		await this.showResumeContent()
 		await this.showStyleContent(1)
 		await this.showHtml()
 		await this.showStyleContent(2)
