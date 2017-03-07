@@ -12,7 +12,7 @@ class Style extends React.Component {
 		return (
 			<div className="styleEditor">
 				<pre>
-					<PrismCode>{this.props.currentStyle}</PrismCode>
+					<PrismCode className="language-javascript">{this.props.currentStyle}</PrismCode>
 				</pre>
 			</div>
 		)
