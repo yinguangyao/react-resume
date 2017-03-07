@@ -2626,7 +2626,7 @@ webpackJsonp([0],[
 
 			var _this = (0, _possibleConstructorReturn3.default)(this, (ReactResume.__proto__ || (0, _getPrototypeOf2.default)(ReactResume)).call(this, props));
 
-			_this.time = 40;
+			_this.time = 20;
 			return _this;
 		}
 
