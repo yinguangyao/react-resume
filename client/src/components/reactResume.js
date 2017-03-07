@@ -11,7 +11,7 @@ import { resumeContent, styleContent } from '../assets/data.js'
 class ReactResume extends React.Component {
 	constructor(props) {
 		super(props);
-		this.time = 40;
+		this.time = 20;
 	}
 
 	showStyleContent(n) {
