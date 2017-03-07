@@ -21,6 +21,7 @@ npm start
 当然你也可以直接打开build下面的index.html，因为这已经是编译过的了，你也可以在src/assets/data.js里面修改数据，然后重新编译生成自己的动态简历。
 
 ## 说明 ##
+之前没有把.babelrc文件传上来，导致大家下载下来无法运行。
 
 需要修改显示速度就到client/src/components/reactResume.js里面的this.time那里，time的数值是指多少ms显示一个字。
 
