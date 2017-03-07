@@ -10,6 +10,8 @@
 请戳这里：https://yinguangyao.github.io/react-resume/client/build/index.html
 
 ## 运行 ##
+
+运行前请确认自己安装了node.js和npm的环境。
 ```
 git clone https://github.com/yinguangyao/react-resume.git
 npm install
