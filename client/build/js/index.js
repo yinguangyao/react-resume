@@ -8052,7 +8052,7 @@ webpackJsonp([0],[
 						null,
 						_react2.default.createElement(
 							_reactPrism.PrismCode,
-							null,
+							{ className: 'language-javascript' },
 							this.props.currentStyle
 						)
 					)
