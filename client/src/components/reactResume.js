@@ -18,7 +18,7 @@ class ReactResume extends React.Component {
 		return new Promise((resolve, reject) => {
 			let style = styleContent[n]||"",
 				currentStyle = this.props.currentStyle||"";
-			let	prevLength = currentStyle.length||0;
+			let	prevLength = currentStyle.length;
 			if(!style) { return; }
 			let showStyle = () => {
 				let addLen = this.props.currentStyle.length - prevLength;
@@ -33,13 +33,14 @@ class ReactResume extends React.Component {
 			showStyle()
 		})
 	}
+	
 	showResumeContent() {
 		return new Promise((resolve, reject) => {
 			let len = resumeContent.length||0;
 			let showResume = () => {
 				let currentLen = this.props.currentResume.length||0;
 				if(currentLen < len) {
-					let char = resumeContent.substring(currentLen, currentLen+1);
+					let char = resumeContent.substring(currentLen, currentLen+1)||"";
 					this.props.setResume(char);
 					setTimeout(showResume, this.time);
 				}else {
