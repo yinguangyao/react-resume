@@ -10,7 +10,6 @@ class Resume extends React.Component {
 	componentDidUpdate() {
 		ReactDOM.findDOMNode(this).scrollTop = 10000;
 	}
-
 	render() {
 		let { isMarkdown=false, currentResume="" } = this.props;
 		return (
