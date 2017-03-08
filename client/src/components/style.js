@@ -21,7 +21,7 @@ class Style extends React.Component {
 
 const mapStateToProps = (state) => {
 	return {
-		currentStyle: state.currentStyle
+		currentStyle: state.currentStyle||""
 	}
 }
 
