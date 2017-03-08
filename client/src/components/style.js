@@ -4,6 +4,9 @@ import {connect} from 'react-redux'
 import { PrismCode } from 'react-prism'
 
 class Style extends React.Component {
+	constructor(props) {
+		super(props);
+	}
 	componentDidUpdate() {
 		ReactDOM.findDOMNode(this).scrollTop = 10000;
 	}
