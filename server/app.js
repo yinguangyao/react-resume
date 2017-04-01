@@ -13,9 +13,8 @@ app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.use(logger('dev'));
 
-app.all("*", (req, res, next) => {
+app.all("*", (req, res) => {
     res.render("index");
-    next();
 })
 
 // catch 404
