@@ -1,7 +1,7 @@
-import express from 'express'
-import path from 'path'
-import ejs from 'ejs'
-import logger from 'morgan'
+const express = require('express')
+const path = require('path')
+const ejs = require('ejs')
+const logger = require('morgan')
 let app = express();
 const port = 4000;
 
