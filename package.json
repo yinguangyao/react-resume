@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --watch",
-    "start": "nodemon ./server/app.js --exec babel-node"
+    "build": "webpack --watch"
   },
   "keywords": [
     "react",

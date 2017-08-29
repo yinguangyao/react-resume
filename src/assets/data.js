@@ -14,11 +14,11 @@ export const resumeContent = `
 
 ### 携程旅行网：web前端工程师 (lizard、react-lite、redux)
 
-* 基于 lizard和react-lite的携程app和h5网站开发
+* 基于 lizard和react-lite的携程Hybird App开发
 
-### 外包项目：弘达电子商城后台管理系统 (ant-design、redux)
+### 外包项目：弘宝电子商城后台管理系统 (ant-design、redux)
 
-* 基于 ant-design以及redux、react-router的商城后台管理系统开发。
+* 基于 ant-design以及redux、react-router的商城后台管理系统
 
 ### [React Resume](https://github.com/yinguangyao/react-resume) (点击链接试试吧)
 

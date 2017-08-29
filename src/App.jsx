@@ -3,8 +3,8 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 
 import configureStore from './redux/store/configureStore.js'
-import ReactResume from './components/ReactResume.js'
-import './app.css'
+import ReactResume from './components/ReactResume.jsx'
+import './App.css'
 
 
 const store = configureStore(window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());

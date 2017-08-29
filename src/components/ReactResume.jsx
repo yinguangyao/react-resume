@@ -3,8 +3,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Prism from "prismjs";
 
-import Resume from './resume.js'
-import Style from './style.js'
+import Resume from './Resume.jsx'
+import StyleSheet from './StyleSheet.jsx'
 import { setMarkdown, setStyle, setResume } from '../redux/actions/action'
 import { resumeContent, styleContent } from '../assets/data.js'
 
@@ -14,11 +14,14 @@ class ReactResume extends React.Component {
 		this.time = 20;
 	}
 
+	componentDidMount() {
+		this.show();
+	}
+
 	showStyleContent(n) {
 		return new Promise((resolve, reject) => {
-			let style = styleContent[n]||"",
-				currentStyle = this.props.currentStyle||"";
-			let	prevLength = currentStyle.length;
+			let style = styleContent[n]||"";
+			let	prevLength = this.props.currentStyle.length;
 			if(!style) { return; }
 			let showStyle = () => {
 				let addLen = this.props.currentStyle.length - prevLength;
@@ -58,22 +61,25 @@ class ReactResume extends React.Component {
 		})
 	}
 	async show() {
-		await this.showStyleContent(0)
-		await this.showResumeContent()
-		await this.showStyleContent(1)
-		await this.showHtml()
-		await this.showStyleContent(2)
-	}
-
-	componentDidMount() {
-		this.show();
+		try {
+			await this.showStyleContent(0)
+			await this.showResumeContent()
+			await this.showStyleContent(1)
+			await this.showHtml()
+			await this.showStyleContent(2)
+		} catch (err) {
+			console.error(err)
+		}
 	}
 	render() {
 		const { currentStyle, currentResume, isMarkdown } = this.props;
 		return (
 			<div>
-				<Style />
-				<Resume />
+				<StyleSheet currentStyle={currentStyle}/>
+				<Resume 
+					isMarkdown={isMarkdown}
+					currentResume={currentResume}
+				/>
 				<style>{currentStyle}</style>
 			</div>
 		)
@@ -82,9 +88,9 @@ class ReactResume extends React.Component {
 
 const mapStateToProps = (state) => {
 	return {
-		isMarkdown: state.isMarkdown||false,
-		currentStyle: state.currentStyle||"",
-		currentResume: state.currentResume||""
+		isMarkdown: state.isMarkdown,
+		currentStyle: state.currentStyle,
+		currentResume: state.currentResume
 	}
 }
 

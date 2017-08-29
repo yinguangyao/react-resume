@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var config = {
     "entry": {
-        "index": "./client/src/app.js",
+        "index": "./src/App.jsx",
         "vendor": [
             "react",
             "react-dom"
@@ -11,7 +11,7 @@ var config = {
          "extentions": ["","js"]//当requrie的模块找不到时，添加这些后缀
     },
     "output": {
-        "path": "./client/build",
+        "path": "./build",
         "filename": "js/[name].js"
     },
     "watch": true,
