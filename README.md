@@ -7,7 +7,7 @@
 
 原作者链接：http://strml.net/
 ## 预览 ##
-请戳这里：https://yinguangyao.github.io/react-resume/client/build/index.html
+请戳这里：https://yinguangyao.github.io/react-resume/build/index.html
 
 ## 运行 ##
 
