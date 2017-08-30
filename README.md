@@ -15,9 +15,7 @@
 ```
 git clone https://github.com/yinguangyao/react-resume.git
 npm install
-npm install nodemon -g
 npm run build
-npm start
 ```
 然后在浏览器里面输入localhost:4000就可以运行了。
 
