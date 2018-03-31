@@ -6,7 +6,6 @@ export const setMarkdown = (bool) => {
 }
 
 export const setStyle = (char) => {
-	debugger;
 	return {
 		type: "SET_STYLE",
 		payLoad: char

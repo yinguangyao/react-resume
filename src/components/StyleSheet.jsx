@@ -1,5 +1,5 @@
 import React from 'react'
-import HOC from '../controller/hoc'
+import HOC from '../share/hoc'
 import { PrismCode } from 'react-prism'
 
 const StyleSheet = (props) => {
