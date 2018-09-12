@@ -8,7 +8,7 @@ var config = {
         ]
     },
     "resolve": {
-         "extentions": ["","js"]//当requrie的模块找不到时，添加这些后缀
+         "extensions": ["","js"]//当requrie的模块找不到时，添加这些后缀
     },
     "output": {
         "path": "./build",
