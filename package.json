@@ -1,45 +1,38 @@
 {
-  "name": "blog",
-  "version": "1.0.0",
-  "description": "this is my blog",
-  "main": "app.js",
+  "name": "react-resume",
+  "version": "2.0.0",
+  "description": "## 介绍 ## 最近看到别人用vue做了一个动态简历，感觉很有意思，所以我就用react和redux自己也做了一份。",
+  "main": "index.js",
+  "dependencies": {
+    "marked": "^0.6.0",
+    "mobx": "^5.9.0",
+    "mobx-react": "^5.4.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-prism": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.3",
+    "@types/react-dom": "^16.8.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.11.0",
+    "typescript": "^3.3.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --watch"
+    "start": "parcel index.html",
+    "tsw": "tsc -w"
   },
-  "keywords": [
-    "react",
-    "express",
-    "es2015"
-  ],
-  "author": "gyyin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yinguangyao/react-resume.git"
+  },
+  "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-cli": "^6.23.0",
-    "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-polyfill": "^6.23.0",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.23.0",
-    "babel-preset-stage-3": "^6.22.0",
-    "babel-runtime": "^6.23.0",
-    "css-loader": "^0.26.2",
-    "ejs": "^2.5.6",
-    "express": "^4.15.0",
-    "marked": "^0.3.6",
-    "morgan": "^1.8.1",
-    "prismjs": "^1.6.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-prism": "^4.0.0",
-    "react-redux": "^5.0.3",
-    "redux": "^3.6.0",
-    "style-loader": "^0.13.2",
-    "webpack": "^1.14.0"
+  "bugs": {
+    "url": "https://github.com/yinguangyao/react-resume/issues"
   },
-  "dependencies": {
-    "path": "^0.12.7"
-  }
+  "homepage": "https://github.com/yinguangyao/react-resume#readme"
 }
