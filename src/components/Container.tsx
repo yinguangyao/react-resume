@@ -8,6 +8,7 @@ import Prism from "prismjs";
 import {
     store as IStore
 } from '../share/interface'
+import store from '../store'
 import Resume from './ReactResume'
 import StyleSheet from './StyleSheet'
 import {
@@ -15,19 +16,18 @@ import {
     styleContent
 } from '../assets/data'
 
-@inject(({store}: {store: IStore}) => {
-    return {
-        styleText: store.styleText,
-        resumeText: store.resumeText,
-        isMarkDown: store.isMarkDown,
-        addStyleText: store.addStyleText,
-        addResumeText: store.addResumeText,
-        changeMarkDownStatus: store.changeMarkDownStatus
-    }
-})
-@observer
-class Container extends React.Component<IStore, {}> {
-    time: number = 100;
+// @inject(({store}: {store: IStore}) => {
+//     return {
+//         styleText: store.styleText,
+//         resumeText: store.resumeText,
+//         isMarkDown: store.isMarkDown,
+//         addStyleText: store.addStyleText,
+//         addResumeText: store.addResumeText,
+//         changeMarkDownStatus: store.changeMarkDownStatus
+//     }
+// })
+class Container extends React.Component<any, {}> {
+    time: number = 50;
     constructor(props: IStore) {
         super(props);
     }
@@ -43,8 +43,9 @@ class Container extends React.Component<IStore, {}> {
         return new Promise((resolve) => {
             let i = 0;
             const interval = setInterval(() => {
-                if (i <= curStyleLen) {
-                    this.props.addStyleText(currentStyle[i]);
+                if (i <= curStyleLen-1) {
+                    store.addStyleText(currentStyle[i]);
+                    this.forceUpdate();
                     i++;
                 } else {
                     clearInterval(interval);
@@ -58,8 +59,8 @@ class Container extends React.Component<IStore, {}> {
         return new Promise((resolve) => {
             let i = 0;
             const interval = setInterval(() => {
-                if (i <= resumeLen) {
-                    this.props.addResumeText(resumeContent[i]);
+                if (i <= resumeLen-1) {
+                    store.addResumeText(resumeContent[i]);
                     i++;
                 } else {
                     resolve();
@@ -69,7 +70,7 @@ class Container extends React.Component<IStore, {}> {
         })
     }
     showHtml() {
-        this.props.changeMarkDownStatus(true);
+        store.changeMarkDownStatus(true);
     }
     async start() {
         try {
@@ -82,8 +83,11 @@ class Container extends React.Component<IStore, {}> {
             console.log(err);
         }
     }
+    componentWillReact() {
+        console.log('this is update')
+    }
     render() {
-        const { styleText, resumeText, isMarkDown } = this.props;
+        const { styleText, resumeText, isMarkDown } = store;
 		return (
 			<div>
 				<StyleSheet styleText={styleText}/>

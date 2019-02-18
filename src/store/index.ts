@@ -10,7 +10,7 @@ class Store implements store {
     @observable styleText: string = ''
     @observable resumeText: string = ''
     @observable isMarkDown: boolean = false
-
+    
     @action
     addStyleText = (styleChar: string): void => {
         this.styleText += styleChar;
