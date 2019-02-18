@@ -3,6 +3,7 @@ import {
     inject,
     observer
 } from 'mobx-react'
+import Prism from "prismjs";
 
 import {
     store as IStore
@@ -58,11 +59,11 @@ class Container extends React.Component<IStore, {}> {
             let i = 0;
             const interval = setInterval(() => {
                 if (i <= resumeLen) {
-                    this.props.addResumeText(resumeLen[i]);
+                    this.props.addResumeText(resumeContent[i]);
                     i++;
                 } else {
-                    clearInterval(interval);
                     resolve();
+                    clearInterval(interval);
                 }
             }, this.time)
         })

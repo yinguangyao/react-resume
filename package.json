@@ -7,10 +7,11 @@
     "marked": "^0.6.0",
     "mobx": "^5.9.0",
     "mobx-react": "^5.4.3",
+    "prismjs": "^1.15.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-prism": "^4.3.2"
+    "react-prism": "^4.0.0"
   },
   "devDependencies": {
     "@types/react": "^16.8.3",
