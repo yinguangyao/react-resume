@@ -34,6 +34,7 @@ npm run build
 
 ## 更新 ##
 2019年2月重新基于TypeScript、mobx和parcel写了一遍这个项目，在v2.0分支可以看到新的代码https://github.com/yinguangyao/react-resume/tree/v2.0
+
 遇到了mobx-react inject合并render的坑，导致了只有最后一次才重新渲染页面，使得这个不再是动态的了。于是抛弃了inject，直接import导入store，并且在更新store的时候进行了forceUpdate。
 
 
