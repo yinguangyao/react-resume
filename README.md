@@ -21,6 +21,8 @@ npm run build
 
 当然你也可以直接打开build下面的index.html，因为这已经是编译过的了，你也可以在src/assets/data.js里面修改数据，然后重新编译生成自己的动态简历。
 
+PS：这个webpack配置早已过时，我也懒得折腾，如果想运行，建议切到v2.0分支上运行，那里是用parcel重新配置的。
+
 ## 说明 ##
 使用async和await时遇到babel编译的坑，最后用babel-runtime和babel-plugin-transform-runtime两个模块搞定了。
 
